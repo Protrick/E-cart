@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5+Wnt9OyQH4=",
+  "success": true,
+  "projectFilePath": "/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Application/ECart.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/pratik/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.12/microsoft.extensions.configuration.abstractions.10.0.12.nupkg.sha512",
+    "/Users/pratik/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.12/microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512",
+    "/Users/pratik/.nuget/packages/microsoft.extensions.primitives/10.0.12/microsoft.extensions.primitives.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

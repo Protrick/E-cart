@@ -1,0 +1,330 @@
+2026-09-29 22:37:11.160 +05:30 [INF] Initializing database schema and seed data...
+2026-09-29 22:37:20.228 +05:30 [ERR] An error occurred while seeding the database.
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user 'neondb_owner'
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlDatabaseCreator.<>c__DisplayClass18_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlDatabaseCreator.<>c__DisplayClass18_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreatedAsync(CancellationToken cancellationToken)
+   at ECart.Infrastructure.Data.DbInitializer.InitializeAsync(AppDbContext context, IPasswordHasher passwordHasher, ILogger logger) in /Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Infrastructure/Data/DbInitializer.cs:line 19
+  Exception data:
+    Severity: ERROR
+    SqlState: 28P01
+    MessageText: password authentication failed for user 'neondb_owner'
+2026-09-29 22:37:20.242 +05:30 [ERR] An error occurred during database initialization / seeding. Please check your connection string in appsettings.json.
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user 'neondb_owner'
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|209_0(NpgsqlConnector conn, String username, SslMode sslMode, GssEncryptionMode gssEncMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|33_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlDatabaseCreator.<>c__DisplayClass18_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlDatabaseCreator.<>c__DisplayClass18_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreatedAsync(CancellationToken cancellationToken)
+   at ECart.Infrastructure.Data.DbInitializer.InitializeAsync(AppDbContext context, IPasswordHasher passwordHasher, ILogger logger) in /Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Infrastructure/Data/DbInitializer.cs:line 19
+   at Program.<Main>$(String[] args) in /Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Api/Program.cs:line 205
+  Exception data:
+    Severity: ERROR
+    SqlState: 28P01
+    MessageText: password authentication failed for user 'neondb_owner'
+2026-09-29 22:37:20.279 +05:30 [INF] User profile is available. Using '/Users/pratik/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-09-29 22:37:20.283 +05:30 [INF] Creating key {332cddff-8173-4cb0-ab12-22a16ce88170} with creation date 2026-09-29 17:07:20Z, activation date 2026-09-29 17:07:20Z, and expiration date 2026-12-28 17:07:20Z.
+2026-09-29 22:37:20.285 +05:30 [WRN] No XML encryptor configured. Key {332cddff-8173-4cb0-ab12-22a16ce88170} may be persisted to storage in unencrypted form.
+2026-09-29 22:37:20.287 +05:30 [INF] Writing data to file '/Users/pratik/.aspnet/DataProtection-Keys/key-332cddff-8173-4cb0-ab12-22a16ce88170.xml'.
+2026-09-29 22:37:20.307 +05:30 [INF] Now listening on: http://localhost:5000
+2026-09-29 22:37:20.307 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 22:37:20.307 +05:30 [INF] Hosting environment: Development
+2026-09-29 22:37:20.307 +05:30 [INF] Content root path: /Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Api
+2026-09-29 22:38:10.340 +05:30 [INF] Initializing database schema and seed data...
+2026-09-29 22:38:10.467 +05:30 [INF] Saved 0 entities to in-memory store.
+2026-09-29 22:38:10.506 +05:30 [INF] Seeding default users...
+2026-09-29 22:38:10.830 +05:30 [INF] Saved 2 entities to in-memory store.
+2026-09-29 22:38:10.831 +05:30 [INF] Default users seeded successfully (Admin: admin@ecart.com, Customer: customer@ecart.com).
+2026-09-29 22:38:10.832 +05:30 [INF] Seeding categories and products...
+2026-09-29 22:38:10.837 +05:30 [INF] Saved 4 entities to in-memory store.
+2026-09-29 22:38:10.850 +05:30 [INF] Saved 6 entities to in-memory store.
+2026-09-29 22:38:10.850 +05:30 [INF] Categories and products seeded successfully.
+2026-09-29 22:38:10.850 +05:30 [INF] Database initialized successfully.
+2026-09-29 22:38:10.876 +05:30 [INF] User profile is available. Using '/Users/pratik/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-09-29 22:38:10.898 +05:30 [INF] Now listening on: http://localhost:5000
+2026-09-29 22:38:10.898 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 22:38:10.898 +05:30 [INF] Hosting environment: Development
+2026-09-29 22:38:10.898 +05:30 [INF] Content root path: /Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Api
+2026-09-29 23:03:11.301 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - null null
+2026-09-29 23:03:11.328 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:03:11.330 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:03:11.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:03:11.343 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 12.0188ms
+2026-09-29 23:03:11.343 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:03:11.343 +05:30 [INF] HTTP GET /api/health responded 200 in 34 ms [Client: ::1]
+2026-09-29 23:03:11.344 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 43.7331ms
+2026-09-29 23:03:47.583 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 62
+2026-09-29 23:03:47.584 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.AuthController.Login (ECart.Api)'
+2026-09-29 23:03:47.590 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECart.Application.DTOs.Auth.LoginRequestDto, System.Threading.CancellationToken) on controller ECart.Api.Controllers.AuthController (ECart.Api).
+2026-09-29 23:03:47.740 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[ECart.Application.DTOs.Auth.AuthResponseDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-29 23:03:47.742 +05:30 [INF] Executed action ECart.Api.Controllers.AuthController.Login (ECart.Api) in 152.1297ms
+2026-09-29 23:03:47.742 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.AuthController.Login (ECart.Api)'
+2026-09-29 23:03:47.742 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 158 ms [Client: ::1]
+2026-09-29 23:03:47.743 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 159.9001ms
+2026-09-29 23:04:20.617 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/products - null null
+2026-09-29 23:04:20.619 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api)'
+2026-09-29 23:04:20.624 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(ECart.Application.DTOs.Products.ProductQueryParameters, System.Threading.CancellationToken) on controller ECart.Api.Controllers.ProductsController (ECart.Api).
+2026-09-29 23:04:20.658 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[ECart.Domain.Common.PagedResult`1[[ECart.Application.DTOs.Products.ProductDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ECart.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-29 23:04:20.661 +05:30 [INF] Executed action ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api) in 36.4283ms
+2026-09-29 23:04:20.661 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api)'
+2026-09-29 23:04:20.661 +05:30 [INF] HTTP GET /api/products responded 200 in 43 ms [Client: ::1]
+2026-09-29 23:04:20.661 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/products - 200 null application/json; charset=utf-8 44.0765ms
+2026-09-29 23:54:47.185 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:54:47.185 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/categories - null null
+2026-09-29 23:54:47.185 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:54:47.185 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/categories - null null
+2026-09-29 23:54:47.189 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.189 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.189 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.189 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.190 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 4 ms [Client: ::1]
+2026-09-29 23:54:47.191 +05:30 [INF] HTTP OPTIONS /api/categories responded 204 in 4 ms [Client: ::1]
+2026-09-29 23:54:47.191 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/categories - 204 null null 6.6175ms
+2026-09-29 23:54:47.191 +05:30 [INF] HTTP OPTIONS /api/categories responded 204 in 4 ms [Client: ::1]
+2026-09-29 23:54:47.191 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/categories - 204 null null 6.8435ms
+2026-09-29 23:54:47.190 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 4 ms [Client: ::1]
+2026-09-29 23:54:47.192 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 7.5163ms
+2026-09-29 23:54:47.192 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 7.9252ms
+2026-09-29 23:54:47.195 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/categories - application/json null
+2026-09-29 23:54:47.195 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:54:47.196 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.199 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.200 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api)'
+2026-09-29 23:54:47.201 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:54:47.201 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:54:47.201 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:54:47.203 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 2.2553ms
+2026-09-29 23:54:47.203 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:54:47.204 +05:30 [INF] HTTP GET /api/health responded 200 in 8 ms [Client: ::1]
+2026-09-29 23:54:47.204 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 8.3467ms
+2026-09-29 23:54:47.209 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:54:47.211 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.212 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:54:47.212 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:54:47.212 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:54:47.212 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.1315ms
+2026-09-29 23:54:47.212 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:54:47.212 +05:30 [INF] HTTP GET /api/health responded 200 in 0 ms [Client: ::1]
+2026-09-29 23:54:47.212 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.307ms
+2026-09-29 23:54:47.216 +05:30 [INF] Route matched with {action = "GetAllCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCategories(System.Threading.CancellationToken) on controller ECart.Api.Controllers.CategoriesController (ECart.Api).
+2026-09-29 23:54:47.233 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Collections.Generic.IReadOnlyList`1[[ECart.Application.DTOs.Categories.CategoryDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:54:47.238 +05:30 [INF] Executed action ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api) in 21.053ms
+2026-09-29 23:54:47.238 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api)'
+2026-09-29 23:54:47.238 +05:30 [INF] HTTP GET /api/categories responded 200 in 38 ms [Client: ::1]
+2026-09-29 23:54:47.238 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/categories - 200 null application/json; charset=utf-8 43.1896ms
+2026-09-29 23:54:47.239 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/categories - application/json null
+2026-09-29 23:54:47.240 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.240 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api)'
+2026-09-29 23:54:47.240 +05:30 [INF] Route matched with {action = "GetAllCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCategories(System.Threading.CancellationToken) on controller ECart.Api.Controllers.CategoriesController (ECart.Api).
+2026-09-29 23:54:47.243 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Collections.Generic.IReadOnlyList`1[[ECart.Application.DTOs.Categories.CategoryDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:54:47.243 +05:30 [INF] Executed action ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api) in 2.4974ms
+2026-09-29 23:54:47.243 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.CategoriesController.GetAllCategories (ECart.Api)'
+2026-09-29 23:54:47.244 +05:30 [INF] HTTP GET /api/categories responded 200 in 3 ms [Client: ::1]
+2026-09-29 23:54:47.244 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/categories - 200 null application/json; charset=utf-8 5.0052ms
+2026-09-29 23:54:47.430 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/products?sortBy=createdAt&isDescending=true&pageSize=24 - null null
+2026-09-29 23:54:47.430 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.430 +05:30 [INF] HTTP OPTIONS /api/products?sortBy=createdAt&isDescending=true&pageSize=24 responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:54:47.430 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/products?sortBy=createdAt&isDescending=true&pageSize=24 - 204 null null 0.2489ms
+2026-09-29 23:54:47.431 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/products?sortBy=createdAt&isDescending=true&pageSize=24 - application/json null
+2026-09-29 23:54:47.431 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:54:47.431 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api)'
+2026-09-29 23:54:47.431 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(ECart.Application.DTOs.Products.ProductQueryParameters, System.Threading.CancellationToken) on controller ECart.Api.Controllers.ProductsController (ECart.Api).
+2026-09-29 23:54:47.433 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[ECart.Domain.Common.PagedResult`1[[ECart.Application.DTOs.Products.ProductDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ECart.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-29 23:54:47.433 +05:30 [INF] Executed action ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api) in 2.3164ms
+2026-09-29 23:54:47.433 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.ProductsController.GetProducts (ECart.Api)'
+2026-09-29 23:54:47.433 +05:30 [INF] HTTP GET /api/products?sortBy=createdAt&isDescending=true&pageSize=24 responded 200 in 2 ms [Client: ::1]
+2026-09-29 23:54:47.434 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/products?sortBy=createdAt&isDescending=true&pageSize=24 - 200 null application/json; charset=utf-8 2.7935ms
+2026-09-29 23:55:17.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:55:17.180 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:55:17.180 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:55:17.180 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.6407ms
+2026-09-29 23:55:17.181 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:55:17.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:55:17.181 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:55:17.181 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:55:17.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:55:17.181 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.1983ms
+2026-09-29 23:55:17.181 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:55:17.181 +05:30 [INF] HTTP GET /api/health responded 200 in 0 ms [Client: ::1]
+2026-09-29 23:55:17.182 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 0.7177ms
+2026-09-29 23:55:47.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:55:47.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:55:47.183 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:55:47.183 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 2.9134ms
+2026-09-29 23:55:47.184 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:55:47.184 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:55:47.184 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:55:47.184 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:55:47.185 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:55:47.185 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.2629ms
+2026-09-29 23:55:47.189 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:55:47.189 +05:30 [INF] HTTP GET /api/health responded 200 in 5 ms [Client: ::1]
+2026-09-29 23:55:47.189 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 5.5359ms
+2026-09-29 23:56:17.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:56:17.180 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:56:17.180 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:56:17.180 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.5725ms
+2026-09-29 23:56:17.181 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:56:17.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:56:17.181 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:56:17.181 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:56:17.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:56:17.181 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.1481ms
+2026-09-29 23:56:17.181 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:56:17.181 +05:30 [INF] HTTP GET /api/health responded 200 in 0 ms [Client: ::1]
+2026-09-29 23:56:17.181 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 0.5412ms
+2026-09-29 23:56:47.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:56:47.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:56:47.183 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:56:47.183 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 3.1017ms
+2026-09-29 23:56:47.184 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:56:47.184 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:56:47.184 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:56:47.184 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:56:47.184 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:56:47.185 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.2363ms
+2026-09-29 23:56:47.185 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:56:47.185 +05:30 [INF] HTTP GET /api/health responded 200 in 0 ms [Client: ::1]
+2026-09-29 23:56:47.185 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 0.9441ms
+2026-09-29 23:57:17.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:57:17.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:17.181 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:57:17.181 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.6369ms
+2026-09-29 23:57:17.182 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:57:17.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:17.182 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:57:17.182 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:57:17.182 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:57:17.183 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.2833ms
+2026-09-29 23:57:17.183 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:57:17.183 +05:30 [INF] HTTP GET /api/health responded 200 in 0 ms [Client: ::1]
+2026-09-29 23:57:17.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 1.1517ms
+2026-09-29 23:57:37.062 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/auth/login - null null
+2026-09-29 23:57:37.063 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:37.063 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:57:37.063 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/auth/login - 204 null null 1.0067ms
+2026-09-29 23:57:37.063 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 62
+2026-09-29 23:57:37.064 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:37.064 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.AuthController.Login (ECart.Api)'
+2026-09-29 23:57:37.064 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ECart.Application.DTOs.Auth.LoginRequestDto, System.Threading.CancellationToken) on controller ECart.Api.Controllers.AuthController (ECart.Api).
+2026-09-29 23:57:37.187 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[ECart.Application.DTOs.Auth.AuthResponseDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-29 23:57:37.187 +05:30 [INF] Executed action ECart.Api.Controllers.AuthController.Login (ECart.Api) in 122.9369ms
+2026-09-29 23:57:37.187 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.AuthController.Login (ECart.Api)'
+2026-09-29 23:57:37.187 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 123 ms [Client: ::1]
+2026-09-29 23:57:37.187 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 123.3878ms
+2026-09-29 23:57:37.196 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/auth/me - null null
+2026-09-29 23:57:37.196 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:37.196 +05:30 [INF] HTTP OPTIONS /api/auth/me responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:57:37.196 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/auth/me - 204 null null 0.2225ms
+2026-09-29 23:57:37.197 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/auth/me - application/json null
+2026-09-29 23:57:37.197 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:37.215 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.AuthController.GetCurrentUser (ECart.Api)'
+2026-09-29 23:57:37.217 +05:30 [INF] Route matched with {action = "GetCurrentUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentUser(System.Threading.CancellationToken) on controller ECart.Api.Controllers.AuthController (ECart.Api).
+2026-09-29 23:57:37.226 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[ECart.Application.DTOs.Auth.UserDto, ECart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-29 23:57:37.227 +05:30 [INF] Executed action ECart.Api.Controllers.AuthController.GetCurrentUser (ECart.Api) in 9.6653ms
+2026-09-29 23:57:37.227 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.AuthController.GetCurrentUser (ECart.Api)'
+2026-09-29 23:57:37.227 +05:30 [INF] HTTP GET /api/auth/me responded 200 in 30 ms [Client: ::1]
+2026-09-29 23:57:37.227 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/auth/me - 200 null application/json; charset=utf-8 30.2755ms
+2026-09-29 23:57:47.181 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:57:47.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:47.182 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:57:47.182 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.5695ms
+2026-09-29 23:57:47.183 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:57:47.184 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:57:47.185 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:57:47.185 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:57:47.185 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:57:47.185 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.1853ms
+2026-09-29 23:57:47.186 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:57:47.186 +05:30 [INF] HTTP GET /api/health responded 200 in 2 ms [Client: ::1]
+2026-09-29 23:57:47.186 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.4341ms
+2026-09-29 23:58:17.181 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:58:17.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:58:17.182 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:58:17.182 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.5954ms
+2026-09-29 23:58:17.183 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:58:17.183 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:58:17.184 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:58:17.184 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:58:17.184 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:58:17.185 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 0.9945ms
+2026-09-29 23:58:17.185 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:58:17.185 +05:30 [INF] HTTP GET /api/health responded 200 in 1 ms [Client: ::1]
+2026-09-29 23:58:17.185 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.0086ms
+2026-09-29 23:58:47.180 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:58:47.180 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:58:47.180 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:58:47.180 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.2733ms
+2026-09-29 23:58:47.181 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:58:47.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:58:47.181 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:58:47.181 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:58:47.181 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:58:47.183 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 1.7014ms
+2026-09-29 23:58:47.183 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:58:47.183 +05:30 [INF] HTTP GET /api/health responded 200 in 2 ms [Client: ::1]
+2026-09-29 23:58:47.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.0632ms
+2026-09-29 23:59:17.181 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:59:17.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:59:17.181 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:59:17.181 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.3472ms
+2026-09-29 23:59:17.181 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:59:17.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:59:17.182 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:59:17.182 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:59:17.182 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:59:17.183 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 1.4637ms
+2026-09-29 23:59:17.183 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:59:17.183 +05:30 [INF] HTTP GET /api/health responded 200 in 1 ms [Client: ::1]
+2026-09-29 23:59:17.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.0772ms
+2026-09-29 23:59:47.181 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/health - null null
+2026-09-29 23:59:47.181 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:59:47.181 +05:30 [INF] HTTP OPTIONS /api/health responded 204 in 0 ms [Client: ::1]
+2026-09-29 23:59:47.182 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/health - 204 null null 0.5337ms
+2026-09-29 23:59:47.182 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - application/json null
+2026-09-29 23:59:47.182 +05:30 [INF] CORS policy execution successful.
+2026-09-29 23:59:47.183 +05:30 [INF] Executing endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:59:47.183 +05:30 [INF] Route matched with {action = "CheckHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckHealth() on controller ECart.Api.Controllers.HealthController (ECart.Api).
+2026-09-29 23:59:47.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'ECart.Domain.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-09-29 23:59:47.184 +05:30 [INF] Executed action ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api) in 1.2606ms
+2026-09-29 23:59:47.184 +05:30 [INF] Executed endpoint 'ECart.Api.Controllers.HealthController.CheckHealth (ECart.Api)'
+2026-09-29 23:59:47.184 +05:30 [INF] HTTP GET /api/health responded 200 in 2 ms [Client: ::1]
+2026-09-29 23:59:47.184 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 null application/json; charset=utf-8 2.2191ms

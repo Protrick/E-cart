@@ -1,0 +1,11 @@
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/bin/Debug/net10.0/ECart.Domain.deps.json
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/bin/Debug/net10.0/ECart.Domain.dll
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/bin/Debug/net10.0/ECart.Domain.pdb
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.AssemblyInfoInputs.cache
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.AssemblyInfo.cs
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.csproj.CoreCompileInputs.cache
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.dll
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/refint/ECart.Domain.dll
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ECart.Domain.pdb
+/Users/pratik/Desktop/Projects/e-cart/backend/src/ECart.Domain/obj/Debug/net10.0/ref/ECart.Domain.dll
